@@ -1,24 +1,23 @@
 <template>
   <div id="app">
-    <NavigationBar/>
-    <MainSection/>
-    <HelloWorld msg="Welcome !"/>
+    <div class="main-screen">
+      <side-bar />
+      <main-container />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import NavigationBar from './Layout/NavigationBar/NavigationBar.vue'
-import MainSection from './Layout/MainSection/MainSection.vue'
+import SideBar from './Layout/SideBar/SideBar.vue';
+import MainContainer from './Layout/MainContainer/MainContainer.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    NavigationBar,
-    MainSection,
-  }
-}
+    SideBar,
+    MainContainer,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -28,5 +27,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.main-screen {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
 }
 </style>
