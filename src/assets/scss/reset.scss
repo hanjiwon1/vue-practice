@@ -124,6 +124,7 @@ BDO[DIR="rtl"] {
   direction: rtl;
   unicode-bidi: embed;
 }
+
 @media print {
   h1 {
     page-break-before: always;
