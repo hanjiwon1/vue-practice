@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <div class="main-screen">
-      <side-bar />
-      <main-container />
-    </div>
+    <v-main>
+      <div class="main-screen">
+        <side-bar />
+        <main-container />
+      </div>
+    </v-main>
   </div>
 </template>
 
@@ -17,6 +19,9 @@ export default {
     SideBar,
     MainContainer,
   },
+  data: () => ({
+    //
+  }),
 };
 </script>
 
@@ -27,6 +32,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: linear-gradient(to bottom right, #cfe6ff, #fff0fa);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
 }
 .main-screen {
   display: flex;
